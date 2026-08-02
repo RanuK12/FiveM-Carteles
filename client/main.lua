@@ -45,7 +45,7 @@ CreateThread(function()
 end)
 
 -- Zonas de interacción
-Citizen.CreateThread(function()
+CreateThread(function()
     for _, cartel in pairs(Carteles) do
         exports.ox_target:addSphereZone({
             coords = cartel.coords,
@@ -55,7 +55,7 @@ Citizen.CreateThread(function()
                     label = cartel.label,
                     icon = 'fas fa-sign',
                     onSelect = function()
-                        TriggerEvent('Cartel-Client:interact', cartel.id)
+                        TriggerEvent('FiveM-Carteles:client:interact', cartel.id)
                     end,
                 },
             },

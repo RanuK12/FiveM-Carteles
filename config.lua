@@ -3,6 +3,9 @@ Config = Config or {}
 -- Framework: 'esx' o 'qbcore'
 Config.Framework = 'esx'
 
+-- Idioma: 'en', 'es', 'it'
+Config.Locale = 'es'
+
 -- Debug mode
 Config.Debug = false
 

@@ -45,7 +45,7 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
         if not hasJob then
             lib.notify(src, {
                 type = 'error',
-                description = Locales.get(Config.Locale).no_permission,
+                description = Locales[Config.Locale].no_permission,
                 position = Config.Notifications.position,
                 duration = Config.Notifications.duration,
             })
@@ -74,7 +74,7 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
         if not hasItem then
             lib.notify(src, {
                 type = 'error',
-                description = Locales.get(Config.Locale).missing_item,
+                description = Locales[Config.Locale].missing_item,
                 position = Config.Notifications.position,
                 duration = Config.Notifications.duration,
             })
@@ -85,7 +85,7 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
     -- Interacción exitosa
     lib.notify(src, {
         type = 'success',
-        description = Locales.get(Config.Locale).interact_success,
+        description = Locales[Config.Locale].interact_success,
         position = Config.Notifications.position,
         duration = Config.Notifications.duration,
     })
