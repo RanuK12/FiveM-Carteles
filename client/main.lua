@@ -28,6 +28,66 @@ RegisterNetEvent('FiveM-Carteles:client:interact', function(cartelId)
     end
 end)
 
+-- Evento para mostrar progreso de cultivo
+RegisterNetEvent('FiveM-Carteles:client:showCultivoProgress', function()
+    local ped = PlayerPedId()
+    lib.progressBar({
+        duration = 30000, -- 30 segundos
+        label = Locales[Config.Locale].cultivo_start,
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            car = true,
+            move = true,
+            combat = true,
+        },
+        anim = {
+            dict = 'anim@amb@business@cocaine@cocaine_cutting@',
+            clip = 'cocoe_cutting',
+        },
+    })
+end)
+
+-- Evento para mostrar progreso de procesado
+RegisterNetEvent('FiveM-Carteles:client:showProcesadoProgress', function()
+    local ped = PlayerPedId()
+    lib.progressBar({
+        duration = 20000, -- 20 segundos
+        label = Locales[Config.Locale].procesado_start,
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            car = true,
+            move = true,
+            combat = true,
+        },
+        anim = {
+            dict = 'mp_arresting',
+            clip = 'idle',
+        },
+    })
+end)
+
+-- Evento para mostrar progreso de venta
+RegisterNetEvent('FiveM-Carteles:client:showVentaProgress', function()
+    local ped = PlayerPedId()
+    lib.progressBar({
+        duration = 15000, -- 15 segundos
+        label = Locales[Config.Locale].venta_start,
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            car = true,
+            move = true,
+            combat = true,
+        },
+        anim = {
+            dict = 'mp_common_missanimations',
+            clip = 'deal_first_player',
+        },
+    })
+end)
+
 -- Spawn de carteles
 CreateThread(function()
     for _, cartel in pairs(Carteles) do
