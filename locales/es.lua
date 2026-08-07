@@ -4,6 +4,7 @@ Locales['es'] = {
     no_permission = 'No tenés permiso para usar esto',
     missing_item = 'Te falta un objeto necesario',
     interact_success = 'Interacción exitosa',
+    cooldown_active = 'Debes esperar {1} segundos antes de volver a interactuar',
     
     -- Cultivo
     cultivo_start = 'Iniciando cultivo de marihuana...',

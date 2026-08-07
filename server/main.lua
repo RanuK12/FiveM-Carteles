@@ -13,6 +13,27 @@ lib.callback.register('FiveM-Carteles:server:getCarteles', function(source)
     return Carteles
 end)
 
+-- Función para enviar webhook de Discord
+local function SendDiscordWebhook(message, type)
+    if not Config.DiscordWebhook or Config.DiscordWebhook == '' then return end
+    
+    local embed = {
+        title = Locales[Config.Locale].webhook_title or 'FiveM-Carteles Notifica',
+        description = message,
+        color = type == 'success' and 65280 or type == 'error' and 16711680 or 16776960,
+        timestamp = os.date('%Y-%m-%dT%H:%M:%S.000Z'),
+        footer = {
+            text = 'FiveM-Carteles v1.0.0'
+        }
+    }
+    
+    PerformHttpRequest(Config.DiscordWebhook, function(err, text, headers)
+        if Config.Debug then
+            print(('[FiveM-Carteles] Webhook response: %s'):format(text or 'nil'))
+        end
+    end, 'POST', json.encode({username = 'FiveM-Carteles', embeds = {embed}}), {['Content-Type'] = 'application/json'})
+end
+
 -- Evento de interacción
 RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
     local src = source
@@ -49,6 +70,9 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
                 position = Config.Notifications.position,
                 duration = Config.Notifications.duration,
             })
+            
+            -- Enviar webhook de intento fallido
+            SendDiscordWebhook(string.format('%s intentó interactuar con %s sin permisos', GetPlayerName(src), cartel.label), 'error')
             return
         end
     end
@@ -78,6 +102,9 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
                 position = Config.Notifications.position,
                 duration = Config.Notifications.duration,
             })
+            
+            -- Enviar webhook de intento fallido
+            SendDiscordWebhook(string.format('%s intentó interactuar con %s sin el item requerido', GetPlayerName(src), cartel.label), 'error')
             return
         end
     end
@@ -89,6 +116,10 @@ RegisterNetEvent('FiveM-Carteles:server:interact', function(cartelId)
         position = Config.Notifications.position,
         duration = Config.Notifications.duration,
     })
+
+    -- Enviar webhook de Discord
+    local webhookMessage = string.format('%s ha interactuado con %s', GetPlayerName(src), cartel.label)
+    SendDiscordWebhook(webhookMessage, 'success')
 
     if Config.Debug then
         print(('[FiveM-Carteles] Jugador %s interactuó con cartel %s'):format(src, cartelId))

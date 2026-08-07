@@ -27,6 +27,14 @@ Config.Carteles = {
             color = 1,
             scale = 0.8,
         },
+        prop = {
+            model = 'prop_lab_table_01',
+            coords = vector3(225.5, -1362.3, 31.5),
+            heading = 45.0,
+            distance = 2.0
+        },
+        animation = 'anim@amb@business@cocaine@cocaine_cutting@',
+        animation_clip = 'cocoe_cutting'
     },
     
     -- Cartel de procesado
@@ -45,6 +53,14 @@ Config.Carteles = {
             color = 2,
             scale = 0.8,
         },
+        prop = {
+            model = 'prop_tool_bench_01',
+            coords = vector3(1354.3, -1560.2, 52.3),
+            heading = 180.0,
+            distance = 2.0
+        },
+        animation = 'mp_arresting',
+        animation_clip = 'idle'
     },
     
     -- Cartel de venta
@@ -63,6 +79,14 @@ Config.Carteles = {
             color = 3,
             scale = 0.8,
         },
+        prop = {
+            model = 'prop_vend_coke_01',
+            coords = vector3(-644.2, 129.8, 80.1),
+            heading = 90.0,
+            distance = 2.0
+        },
+        animation = 'mp_common_missanimations',
+        animation_clip = 'deal_first_player'
     },
 }
 
@@ -70,7 +94,7 @@ Config.Carteles = {
 Config.InteractionTime = 3000
 
 -- Notificaciones
-Config.Notifications = {
+Config.Notifications = {\n    position = 'top-right',\n    duration = 5000,\n}\n\nConfig.Cooldown = 5000 -- ms, anti-cheat cooldown\nConfig.DiscordWebhook = '' -- Set your Discord webhook URL here
     position = 'top-right', -- 'top-right', 'top-left', 'bottom-right', 'bottom-left'
     duration = 5000,
 }

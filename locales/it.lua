@@ -1,9 +1,17 @@
 Locales = Locales or {}
 Locales['it'] = {
+    webhook_title = 'FiveM-Carteles Notifica',
     cartel_not_found = 'Cartello non trovato',
     no_permission = 'Non hai il permesso per usarlo',
     missing_item = 'Ti manca un oggetto necessario',
     interact_success = 'Interazione riuscita',
+    cooldown_active = 'Devi attendere {1} secondi prima di interagire di nuovo',
+    -- Discord webhook messages
+    webhook_cultivo = 'Cultivo iniziato',
+    webhook_procesado = 'Procesamento iniziato',
+    webhook_venta = 'Vendita iniziata',
+    webhook_success = 'Transazione completata con successo',
+    webhook_fail = 'Transazione fallita'
     
     -- Cultivo
     cultivo_start = 'Inizio coltivazione di marijuana...',

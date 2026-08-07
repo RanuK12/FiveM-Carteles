@@ -1,43 +1,91 @@
-# FiveM-Carteles
+# FiveM-Carteles - Sistema de Carteles Interactivos
 
-Sistema de carteles/marcadores interactivos para FiveM. Compatible con ESX y QB-Core.
+## Descripción
+FiveM-Carteles es un sistema de carteles interactivos para FiveM que permite a los jugadores participar en actividades ilegales como cultivo, procesamiento y venta de drogas dentro del servidor.
 
-## Estructura
+## Características
 
-```
-FiveM-Carteles/
-├── fxmanifest.lua       # Manifest del resource
-├── config.lua           # Configuración general
-├── client/
-│   └── main.lua         # Lógica del cliente
-├── server/
-│   └── main.lua         # Lógica del servidor
-├── shared/
-│   └── main.lua         # Lógica compartida
-├── locales/
-│   ├── en.lua           # Inglés
-│   ├── es.lua           # Español
-│   └── it.lua           # Italiano
-├── sql/
-│   └── schema.sql       # Esquema de base de datos (oxmysql)
-└── README.md
-```
+### 🌱 Sistema de Cultivo
+- Cultiva marihuana en ubicaciones específicas
+- Requiere semillas para iniciar
+- Tiempo de cultivo: 30 segundos
+- Animaciones realistas de cultivo
 
-## Dependencias
+### 🔬 Sistema de Procesamiento
+- Procesa marihuana cultivada en droga pura
+- Requiere marihuana cultivada como material
+- Tiempo de procesamiento: 20 segundos
+- Animaciones de laboratorio
 
-- [oxmysql](https://github.com/overextended/oxmysql)
-- ESX o QB-Core (configurable)
+### 💰 Sistema de Venta
+- Venta de droga procesada a NPC o jugadores
+- Requiere droga procesada
+- Tiempo de venta: 15 segundos
+- Animaciones de transacción
+
+### 🛡️ Anti-Cheat
+- Sistema de detección de actividades sospechosas
+- Monitoreo de tiempos de interacción
+- Registro de acciones para revisión de administradores
+
+### 🔔 Discord Webhook
+- Notificaciones automáticas en Discord
+- Alertas de actividad en carteles
+- Registros de transacciones importantes
+
+## Requisitos
+
+- **oxmysql** - Para manejo de base de datos
+- **ox_lib** - Para UI y componentes
+- **ox_target** - Para zonas de interacción
+- **Framework**: ESX o QBCore
 
 ## Instalación
 
-1. Copiá la carpeta `FiveM-Carteles` a tu directorio `resources/`
-2. Agregá `ensure FiveM-Carteles` a tu `server.cfg`
-3. Ejecutá el SQL en `sql/schema.sql` en tu base de datos
-4. Ajustá `config.lua` según tu framework (ESX / QB-Core)
+1. Copia la carpeta `FiveM-Carteles` a tu directorio de recursos de FiveM
+2. Asegúrate de tener los requisitos instalados
+3. Ejecuta el archivo SQL en tu base de datos
+4. Agrega `ensure FiveM-Carteles` a tu `server.cfg`
 
 ## Configuración
 
-Editá `config.lua` para:
-- Elegir framework (`Config.Framework = 'esx'` o `'qbcore'`)
-- Definir los carteles y sus posiciones
-- Ajustar tiempos de interacción y permisos
+Edita `config.lua` para personalizar:
+
+- Framework (ESX o QBCore)
+- Idioma (en, es, it)
+- Posiciones de carteles
+- Tiempos de interacción
+- Webhook de Discord
+
+## Uso
+
+### Como Administrador
+
+1. Coloca los carteles en las ubicaciones deseadas
+2. Configura los permisos de job si es necesario
+3. Monitorea la actividad a través del Discord webhook
+
+### Como Jugador
+
+1. Acércate a un cartel interactivo
+2. Presiona la tecla de interacción
+3. Sigue las instrucciones en pantalla
+4. Completa la actividad con éxito
+
+## Monetización
+
+Este recurso está disponible para venta en Tebex:
+- Precio: $25 USD
+- Incluye soporte por 30 días
+- Actualizaciones gratuitas por 3 meses
+- Personalización básica incluida
+
+## Contacto
+
+Para soporte o consultas:
+- Email: emilio@ranuk.dev
+- Discord: Ranuk IT Solutions
+
+## Licencia
+
+© 2026 Ranuk IT Solutions. Todos los derechos reservados.
