@@ -1,5 +1,4 @@
-![Demo]({{SITE_URL}}/fiveM_cartel_mockup.png)
-
+[![Demo](https://ranuk.dev/fivem_cartel_mockup.png)
 # FiveM-Carteles - Sistema de Carteles Interactivos
 
 ## Descripción
@@ -36,23 +35,19 @@ FiveM-Carteles es un sistema de carteles interactivos para FiveM que permite a l
 - Registros de transacciones importantes
 
 ## Requisitos
-
 - **oxmysql** - Para manejo de base de datos
 - **ox_lib** - Para UI y componentes
 - **ox_target** - Para zonas de interacción
 - **Framework**: ESX o QBCore
 
 ## Instalación
-
 1. Copia la carpeta `FiveM-Carteles` a tu directorio de recursos de FiveM
 2. Asegúrate de tener los requisitos instalados
 3. Ejecuta el archivo SQL en tu base de datos
 4. Agrega `ensure FiveM-Carteles` a tu `server.cfg`
 
 ## Configuración
-
 Edita `config.lua` para personalizar:
-
 - Framework (ESX o QBCore)
 - Idioma (en, es, it)
 - Posiciones de carteles
@@ -62,20 +57,17 @@ Edita `config.lua` para personalizar:
 ## Uso
 
 ### Como Administrador
-
 1. Coloca los carteles en las ubicaciones deseadas
 2. Configura los permisos de job si es necesario
 3. Monitorea la actividad a través del Discord webhook
 
 ### Como Jugador
-
 1. Acércate a un cartel interactivo
 2. Presiona la tecla de interacción
 3. Sigue las instrucciones en pantalla
 4. Completa la actividad con éxito
 
 ## Monetización
-
 Este recurso está disponible para venta en Tebex:
 - Precio: $25 USD
 - Incluye soporte por 30 días
@@ -83,11 +75,9 @@ Este recurso está disponible para venta en Tebex:
 - Personalización básica incluida
 
 ## Contacto
-
 Para soporte o consultas:
 - Email: emilio@ranuk.dev
 - Discord: Ranuk IT Solutions
 
 ## Licencia
-
 © 2026 Ranuk IT Solutions. Todos los derechos reservados.
