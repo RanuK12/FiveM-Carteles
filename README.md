@@ -1,4 +1,6 @@
-[![Demo](https://ranuk.dev/fivem_cartel_mockup.png)
+[![Demo](assets/cartel_cultivo_demo.png)
+
+> **Nota:** Esta es una imagen de demostración del cartel de cultivo. Para más información sobre configuración y uso, ver la sección 'Uso' a continuación.
 # FiveM-Carteles - Sistema de Carteles Interactivos
 
 ## Descripción
