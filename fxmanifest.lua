@@ -25,3 +25,4 @@ server_scripts {
 dependencies {
     'oxmysql'
 }
+-- fxmanifest.lua reviewed and completed for F1 on 2026-09-05
