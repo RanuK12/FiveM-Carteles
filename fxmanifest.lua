@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-author 'Ranuk IT Solutions'
+author 'RanuK12'
 description 'Sistema de carteles interactivos para FiveM'
 version '1.1.0'
 
@@ -28,4 +28,6 @@ server_scripts {
 dependencies {
     'oxmysql',
     'ox_lib',
+    'es_extended',
+    'qb-core'
 }
