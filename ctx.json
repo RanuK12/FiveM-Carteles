@@ -1,0 +1,17 @@
+{
+  "repo_slug": "RanuK12/FiveM-Carteles",
+  "repo_dir": "/Users/emilioranucoli/.ranukita/projects/fivem-carteles",
+  "issue_num": null,
+  "bounty_url": null,
+  "archivos": ["fxmanifest.lua"],
+  "archivos_nuevos": [],
+  "lineas": 28,
+  "titulo": "feat: completado fxmanifest.lua con todos los archivos",
+  "cuerpo": "Se completó el fxmanifest.lua con todos los archivos necesarios para que el recurso sea instalable. Se añadieron explícitamente los archivos client/main.lua, server/main.lua, config.lua, shared/utils.lua y los locales. Se verificó la sintaxis con luac5.4 y se confirmó que todos los archivos declarados existen.",
+  "evidencia_ejecucion": {
+    "cmd": "luac5.4 -p fxmanifest.lua",
+    "salida": "",
+    "returncode": 0
+  },
+  "proceso_leido": false
+}
