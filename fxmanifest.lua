@@ -14,6 +14,7 @@ shared_scripts {
     'locales/en.lua',
     'locales/es.lua',
     'locales/it.lua',
+    'fivem_cartel_mockup.png',
 }
 
 client_scripts {
