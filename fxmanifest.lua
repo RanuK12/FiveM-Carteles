@@ -1,27 +1,29 @@
-fx_version 'cerulean'
-game 'gta5'
-lua54 'yes'
+fx_version "cerulean"
+game "gta5"
+lua54 "yes"
+required_version "cerulean"
 
-author 'Emilio RanuK12'
-description 'Carteles y señalización para servidores RP (FiveM).'
-version '1.0.0'
+author "Emilio RanuK12"
+description "Carteles y señalización para servidores RP (FiveM)."
+version "1.0.0"
 
 client_scripts {
-    'client/main.lua',
+    "client/main.lua",
 }
 
 server_scripts {
-    'server/main.lua',
+    "server/main.lua",
 }
 
 shared_scripts {
-    'config.lua',
-    'shared/utils.lua',
-    'locales/en.lua',
-    'locales/es.lua',
-    'locales/it.lua',
+    "config.lua",
+    "shared/main.lua",
+    "shared/utils.lua",
+    "locales/en.lua",
+    "locales/es.lua",
+    "locales/it.lua",
 }
 
 dependencies {
-    'oxmysql'
+    "oxmysql"
 }
