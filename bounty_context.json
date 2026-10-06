@@ -1,0 +1,13 @@
+{
+    "repo": "RanuK12/FiveM-Carteles",
+    "branch": "ranukita/d76c7a-final",
+    "files": ["fxmanifest.lua"],
+    "commit": "6014b7c",
+    "task": "Crear fxmanifest.lua completo para FiveM",
+    "description": "Agrega manifest de FiveM completo con client_scripts, server_scripts, shared_scripts, files y dependencies",
+    "changes": {
+        "added": "fxmanifest.lua completo con todas las secciones necesarias",
+        "modified": null,
+        "deleted": null
+    }
+}
